@@ -12,6 +12,7 @@
     src: "{{ ansible_cache_path }}/kafka_{{ kafka_scala_version }}-{{ kafka_version }}.tgz"
     dest: /usr/local
     creates: /usr/local/kafka_{{ kafka_scala_version }}-{{ kafka_version }}"
+    copy: no
 
 - name: creates kafka link
   file:
