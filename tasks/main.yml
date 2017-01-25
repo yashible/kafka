@@ -19,3 +19,8 @@
     src: "/usr/local/kafka_{{ kafka_scala_version }}-{{ kafka_version }}"
     dest: /usr/local/kafka
     state: link
+
+- name: creates server.properties
+  template:
+    src: 'server.properties.j2'
+    dest: '/usr/local/kafka/config/server.properties'
